@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/css/styles.css" rel="stylesheet">
+  <script src="/js/main.js" defer></script>
+  <title>
+    {% if title %}
+      {{ title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
+</head>
+
+<body>
+<style>
+  :root {
+    /*colors*/
+    --primary: #02092A;
+    --secondary: #709CFF;
+    --accent: #6091FF;
+    /* fonts */
+    --font-family: 'Poppins', sans-serif;
+    /* sizes */
+    --size-sm: 150px;
+    --size-md: 300px; 
+    --size-lg: 430px;
+    /* Responsive functions*/
+    --responsive-title: clamp(2rem, 1.2500rem + 3.3333vw, 3rem);
+    --responsive-columns: repeat(auto-fit, minmax(min(100%, var(--size-md)), 1fr));
+  }
+</style>
+  <div class="root">
+    <header class="header">{% include "partials/header.html" %}</header>
+    <div class="main-content reveal">
+      {% block content %}
+      {% endblock content %}
+    </div>
+    <footer class="footer">
+      {% include "partials/footer.html" %}
+    </footer>
+  </div> 
+  
+</body>
+
+</html>

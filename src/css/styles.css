@@ -1,0 +1,64 @@
+/* BASE */
+/* BASE */
+html {
+  all: unset;
+  width: 100vw;
+  overflow-x: hidden;
+  height: -webkit-fill-available;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  height: inherit;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  /* color: var(--color-primary); */
+}
+
+.root {
+  display: grid;
+  max-width: 1568px;
+  width: 100%;
+  /* grid-template-rows: 70px 1fr auto; */
+}
+
+.main-content {
+  display: grid;
+}
+
+.home {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.navbar__actions {
+  display: inherit;
+  grid-auto-flow: column;
+}
+
+ 
