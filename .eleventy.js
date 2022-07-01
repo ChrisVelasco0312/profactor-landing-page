@@ -1,5 +1,6 @@
 const Image = require('@11ty/eleventy-img')
 const moment = require('moment')
+const eleventySass = require('eleventy-sass')
 
 module.exports = (config) => {
   config.htmlTemplateEngine = 'njk'
@@ -10,6 +11,8 @@ module.exports = (config) => {
 
   config.addNunjucksAsyncShortcode('Image', imageConverter)
   config.addLiquidShortcode('Image', imageConverter)
+
+  config.addPlugin(eleventySass)
 
   /*FILTERS*/
 

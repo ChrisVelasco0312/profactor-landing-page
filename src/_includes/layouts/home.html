@@ -1,9 +1,51 @@
 ---
 title: "Profactor"
 ---
-
 {% extends 'layouts/base.html' %}
 
+{%- from "components/TitleGroup/macro.njk" import TitleGroup -%}
+
 {% block content %}
-<h1>Welcome to Page</h1>
+
+<!-- HERO SECTION -->
+<section class="hero" style="background-image: url('/img/hero-image.png')">
+  <div class="titles">
+    <h1 class="title">SERVICIOS FINANCIEROS</h1>
+    <a class="hero-link outline-button" href="#">HAZ FACTORING CON NOSOTROS</a>
+    <hr>
+  </div>
+</section>
+
+<!-- ABOUT SECTIONS -->
+<div class="about-container dark-section">
+  <section id="about" class="about-who">
+
+    <div class="column">
+      {{
+        TitleGroup({
+          subtitle: 'SOBRE NOSOTROS',
+          title: '¿Quiénes somos?',
+          justifyItems: 'none',
+          titlesGap: '0.8rem'
+        })
+      }}
+
+      <div class="paragraphs">
+        <p class="paragraph">Somos una compañia de servicios financieros con domicilio en la ciudad de Cali,
+          especializada
+          en la intermediación de compra y venta de cartera a través del mecanismo financiero de factoring.</p>
+        <p class="paragraph">Nuestro principal objetivo es diseñar y desarrolar portfolios de inversión a la medida de
+          las
+          expectativas de cada inversionista, dentro del marco de la ley de 1231 (ley de factoring) permitido por las
+          leyes Colombianas, teniendo en cuenta la experiencia, el conocimiento y la dedicación de nuestro equipo de
+          profesionales que busca satisfacer sus necesidades de inversión en cuanto a plazos, nivel de riesgo,
+          rentabilidad e incremento de su patrimonio.</p>
+      </div>
+    </div>
+
+    <img class="about-who__image" src="/img/about-who.png" alt="whoweare">
+  </section>
+</div>
+
+
 {% endblock content %}
