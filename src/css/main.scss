@@ -1,7 +1,7 @@
 // MIXINS
 @mixin backgroundImageNoRepeat {
   background-position: center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -140,9 +140,12 @@ header {
       border-width: 4px;
       border-style: solid;
       border-radius: 3rem;
+      background:white;
     }
   }
 }
+
+//ABOUT
 
 .about-container {
   display: grid;
@@ -151,33 +154,15 @@ header {
 
   .about-who {
     @include sectionSize();
-    height: 80vh;
-    padding: 2rem;
+    // height: 80vh;
+    padding: 6rem 2rem;
     display: grid;
     align-items: center;
-
     grid-template-columns: repeat(2, 1fr);
 
     .column {
       display: grid;
       gap: 2rem;
-    }
-
-    .titles {
-      display: grid;
-      gap: 0.8rem;
-
-      .subtitle {
-        color: var(--accent);
-        font-weight: bold;
-        font-size: 1.25rem;
-      }
-
-      .title {
-        color: white;
-        font-weight: bold;
-        font-size: 3.125rem;
-      }
     }
 
     .paragraphs {
@@ -196,5 +181,100 @@ header {
       align-self: center;
       justify-self: center;
     }
+  }
+
+  .about-us {
+    position: relative;
+
+    &__image {
+      position: absolute;
+      background-image: url('/img/about-us-full.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 293px;
+      border-radius: 1rem;
+      height: 375px;
+      width: 100%;
+      z-index: 1;
+
+    }
+
+    @include sectionSize();
+    padding: 6rem 2rem;
+    display: grid;
+    align-items: center;
+
+    .card-group {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 2.125rem;
+      justify-items: center;
+      padding: 3.25rem;
+
+      .team-card {
+        display: grid;
+        width: fit-content;
+        background: white;
+        border-radius: 0.938rem;
+        color: black;
+        padding: 1.313rem 1.875rem;
+        font-size: 1.25rem;
+
+        &__title {
+          color: var(--secondary);
+          padding-bottom: 1rem;
+          font-size: inherit;
+        }
+
+        &__name {
+          font-size: inherit;
+        }
+
+        &__description {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+
+// PROJECTS
+
+.our-projects-container {
+  display: grid;
+  justify-items: center;
+
+  .our-projects {
+    display: grid;
+    @include sectionSize();
+    padding: 3rem 2rem;
+    justify-items: center;  
+    gap: 2rem;
+   
+    &__card {
+      display: grid;
+      @include backgroundImageNoRepeat();
+
+      height: 514px;
+      width: 80%;
+      border-radius: 0.938rem;
+      padding: 2.25rem;
+
+      &-content {
+        align-self: end;
+        color: white;
+        &--titles {
+          font-size: 1.875rem;
+         h2 {
+           color: rgba(255, 255, 255, 0.5);
+         } 
+         padding-bottom: 1rem;
+        }
+        &--text {
+          font-size: 1.25rem;
+        }
+      }
+   } 
   }
 }
