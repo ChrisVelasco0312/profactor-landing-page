@@ -1,6 +1,7 @@
 ---
 title: "Profactor"
 ---
+
 {% extends 'layouts/base.html' %}
 
 {%- from "components/TitleGroup/macro.njk" import TitleGroup -%}
@@ -143,6 +144,103 @@ title: "Profactor"
 
   </section>
 </div>
+
+<!-- SERVICES -->
+<div class="services-container dark-section">
+  <section class="services">
+    {{
+      TitleGroup({
+        subtitle: 'SERVICIOS',
+        title: 'Control de Lavado de Activos',
+        justifySelf:'center',
+        textAlign: 'center',
+        titlesGap: '0.8rem',
+        subtitleColor: 'var(--accent)',
+        titleColor: 'white' })
+    }}
+
+    <div class="services-card">
+      <div class="services-card__content">
+        <!-- <h2 class="services-card__title">Control de Activos</h2> -->
+        <div class="services-card__paragraph-wrapper">
+          <hr class="services-divider__horizontal">
+          <p class="services-card__paragraph">
+            En PROFACTOR S.A.S cumplimos de una forma estricta el 
+            proceso de sarlaft para filtrar personas jurídicas y 
+            naturales, minimizando el riesgo legal, operativo, 
+            de contagio y reputacional.
+          </p>
+        </div>
+        <!-- <div class="servicer-divider__vertical"> -->
+        <!-- </div> -->
+        <div class="services-card__paragraph-wrapper">
+          <hr class="services-divider__horizontal">
+          <p class="services-card__paragraph">
+            Dicho procedimiento (sarlaft) fue implementado por el 
+            Dr. Milton Fabián Villegas exfuncionario 
+            de cumplimiento en el banco de occidente.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="services-card--2">
+      <div class="services-card--2__content">
+        <!-- <h2 class="services-card__title">Control de Activos</h2> -->
+        <div class="services-card__paragraph-wrapper">
+          {{
+            TitleGroup({
+              subtitle: 'SERVICIOS',
+              title: 'Selección de clientes emisores',
+              titlesGap: '0.8rem',
+              subtitleColor: 'var(--accent)',
+              titleColor: 'white' })
+          }}
+        </div>
+        <!-- <div class="servicer-divider__vertical"> -->
+        <!-- </div> -->
+        <div class="services-card__paragraph-wrapper">
+          <p class="services-card__paragraph">
+            Nuestra labor comercial inicia en la fuerte 
+            relación que entablamos con el pagador que 
+            en algunas ocasiones en aras de beneficiar 
+            a sus proveedores lo direcciona a nosotros.  
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="facts">  
+      <div class="facts-cipher__content">
+        <h2 class="facts-cipher__title">
+          Constituidos desde
+        </h2>
+        <h1 class="facts-cipher__number">
+         2000 
+        </h1>
+      </div>
+      <div class="facts-cipher__content">
+        <h2 class="facts-cipher__title">
+          Número de pagadores
+        </h2>
+        <h1 class="facts-cipher__number">
+         900 
+        </h1>
+      </div>
+      <div class="facts-cipher__content">
+        <h2 class="facts-cipher__title">
+          Número de facturas
+          y millones colocados
+        </h2>
+        <h1 class="facts-cipher__number">
+         19M COP 
+        </h1>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
 
 
 

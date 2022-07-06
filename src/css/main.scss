@@ -278,3 +278,83 @@ header {
    } 
   }
 }
+
+// SERVICES
+
+.services-container {
+  display: grid;
+  justify-items: center;
+  .services {
+    display: grid;
+    @include sectionSize();
+    padding: 8rem 2rem;
+    gap: 4.188rem;
+
+    &-divider__horizontal {
+      width: 200px;
+      background: white;
+      height: 2px;
+    }
+
+    &-card {
+      background-image: url('/img/services-control-de-activos.png');
+      @include backgroundImageNoRepeat();
+      display: grid;
+      height: 751px;
+      width: 100%;
+      border-radius: 0.938rem;
+      padding: 2.25rem;
+      justify-self: center;
+      justify-items: center;
+      align-items: center;
+      color: white;
+      font-size: 1.25rem;
+      &__content {
+        display: grid;
+        align-self: end;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6.25rem;
+        color: white;
+        font-size: 1.25rem;
+
+        .services-card__paragraph-wrapper {
+          display: grid;
+          gap: 1rem;
+        }
+      }
+    }
+
+    &-card--2 {
+
+      h1.title {
+        width: 95%;
+      }
+      background-image: url('/img/services-clientes-emisores.png');
+      @include backgroundImageNoRepeat();
+      display: grid;
+      height: 751px;
+      width: 100%;
+      border-radius: 0.938rem;
+      padding: 2.25rem;
+      justify-self: center;
+      justify-items: center;
+      align-items: center;
+      color: white;
+      font-size: 1.25rem;
+      &__content {
+        display: grid;
+        align-self: end;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6.25rem;
+        color: white;
+        font-size: 1.25rem;
+
+        .services-card__paragraph-wrapper {
+          display: grid;
+          gap: 1rem;
+          align-items: end;
+        }
+      }
+    }
+  }
+}

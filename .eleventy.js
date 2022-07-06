@@ -9,6 +9,11 @@ module.exports = (config) => {
   config.addPassthroughCopy('src/js')
   config.addPassthroughCopy('src/favicon.ico')
 
+  // libraries
+  config.addPassthroughCopy({
+    'node_modules/motion/dist/motion.min.js': 'assets/motion.min.js' 
+  })
+
   config.addNunjucksAsyncShortcode('Image', imageConverter)
   config.addLiquidShortcode('Image', imageConverter)
 
