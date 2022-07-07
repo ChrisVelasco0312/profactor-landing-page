@@ -129,11 +129,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 })
 
-const splide = new Splide('.splide', {
-  perPage: 4,
-  rewind: true
-})
+// const splide = new Splide('.splide', {
+//   perPage: 4,
+//   rewind: true
+// })
 
-splide.mount()
+// splide.mount()
+
+// splide with paginator
+const splide2 = new Splide('.splide', {
+  perPage: 3,
+  rewind: true,
+  width: '100%',
+  height: '400px',
+  gap: '1rem',
+  arrows: false,
+  lazyload: true,
+
+  pagination: {
+    type: 'bullets',
+    clickable: true,
+  }
+}).mount()
 
 

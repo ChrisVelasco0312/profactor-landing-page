@@ -140,7 +140,7 @@ header {
       border-width: 4px;
       border-style: solid;
       border-radius: 3rem;
-      background:white;
+      background: white;
     }
   }
 }
@@ -249,9 +249,9 @@ header {
     display: grid;
     @include sectionSize();
     padding: 3rem 2rem;
-    justify-items: center;  
+    justify-items: center;
     gap: 2rem;
-   
+
     &__card {
       display: grid;
       @include backgroundImageNoRepeat();
@@ -264,18 +264,22 @@ header {
       &-content {
         align-self: end;
         color: white;
+
         &--titles {
           font-size: 1.875rem;
-         h2 {
-           color: rgba(255, 255, 255, 0.5);
-         } 
-         padding-bottom: 1rem;
+
+          h2 {
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          padding-bottom: 1rem;
         }
+
         &--text {
           font-size: 1.25rem;
         }
       }
-   } 
+    }
   }
 }
 
@@ -284,6 +288,7 @@ header {
 .services-container {
   display: grid;
   justify-items: center;
+
   .services {
     display: grid;
     @include sectionSize();
@@ -309,6 +314,7 @@ header {
       align-items: center;
       color: white;
       font-size: 1.25rem;
+
       &__content {
         display: grid;
         align-self: end;
@@ -328,6 +334,7 @@ header {
       h1.title {
         width: 95%;
       }
+
       background-image: url('/img/services-clientes-emisores.png');
       @include backgroundImageNoRepeat();
       display: grid;
@@ -340,6 +347,7 @@ header {
       align-items: center;
       color: white;
       font-size: 1.25rem;
+
       &__content {
         display: grid;
         align-self: end;
@@ -361,6 +369,7 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     color: white;
+
     &-cipher__content {
       display: inherit;
       gap: 0.5rem;
@@ -382,12 +391,43 @@ header {
 .partners-container {
   display: grid;
   justify-items: center;
+
   .partners {
     padding: 3rem 2rem;
     display: inherit;
+    width: 100%;
     @include sectionSize();
+
     &-slider {
-      height: 300px;
+      height: 500px;
+      display: grid;
+      justify-content: center;
+
+      &>* {
+        height: 100%;
+      }
+
+      .splide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+      }
+
+      .splide__slide {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        &-image {
+          width: 70%;
+          height: auto;
+          align-self: center;
+          @include backgroundImageNoRepeat();
+          background-size: contain;
+        }
+      }
     }
   }
 }
