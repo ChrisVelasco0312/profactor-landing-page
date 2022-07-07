@@ -325,7 +325,6 @@ header {
     }
 
     &-card--2 {
-
       h1.title {
         width: 95%;
       }
@@ -355,6 +354,40 @@ header {
           align-items: end;
         }
       }
+    }
+  }
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    &-cipher__content {
+      display: inherit;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    &-cipher__title {
+      font-size: 2rem;
+    }
+
+    &-cipher__number {
+      font-size: 5.625rem;
+      color: var(--accent);
+    }
+  }
+}
+
+// PARTNERS
+.partners-container {
+  display: grid;
+  justify-items: center;
+  .partners {
+    padding: 3rem 2rem;
+    display: inherit;
+    @include sectionSize();
+    &-slider {
+      height: 300px;
     }
   }
 }
