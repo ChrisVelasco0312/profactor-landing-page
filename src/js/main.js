@@ -151,102 +151,111 @@ const homeScript = () => {
 }
 
 
+const factoringScript = () => {
 
-//DROPAREA LOGIC
-const dropArea = document.querySelector('.form-upload-zone')
-const formUploadText = document.querySelector('.form-upload-text')
-
-;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-  dropArea.addEventListener(eventName, preventDefaults, false)
-})
-
-function preventDefaults(e) {
-  e.preventDefault()
-  e.stopPropagation()
-}
-
-// Add highlight to the drop area when the user is dragging a file
-['dragenter', 'dragover'].forEach(eventName => {
-  dropArea.addEventListener(eventName, highlight, false)
-})
-
-;['dragleave', 'drop'].forEach(eventName => {
-  dropArea.addEventListener(eventName, unhighlight, false)
-})
-
-function highlight(event) {
-  dropArea.classList.add('highlight')
-}
-
-function unhighlight(event) {
-  dropArea.classList.remove('highlight')
-}
-
-dropArea.addEventListener('drop', handleDrop, false)
-
-function handleDrop(event) {
-  const dt = event.dataTransfer
-  const files = dt.files
-  handleFiles(files)
-  formUploadText.innerHTML = [...files][0].name
-}
-
-let myFiles = []
-
-function handleFiles(files) {
-  files = [...files]
-  files.forEach(uploadFile)
-  myFiles = files
-}
-
-
-function uploadFile(file) {
-  const formData = new FormData()
-
-  formData.append('file', file)
+  //DROPAREA LOGIC
+  const dropArea = document.querySelector('.form-upload-zone')
+  const formUploadText = document.querySelector('.form-upload-text')
   
-  return file
-}
-
-
-const uploadZoneButton = document.querySelector('.upload-zone-click')
-
-uploadZoneButton.addEventListener('click', () => {
-  importData()
-})
-
-function importData () {
-  let input = document.createElement('input')
-  input.type = 'file'
-  input.onchange = _ => {
-    let files = Array.from(input.files)
-    formUploadText.innerHTML = files[0].name
+  ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, preventDefaults, false)
+  })
+  
+  function preventDefaults(e) {
+    e.preventDefault()
+    e.stopPropagation()
+  }
+  
+  // Add highlight to the drop area when the user is dragging a file
+  ['dragenter', 'dragover'].forEach(eventName => {
+    dropArea.addEventListener(eventName, highlight, false)
+  })
+  
+  ;['dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, unhighlight, false)
+  })
+  
+  function highlight(event) {
+    dropArea.classList.add('highlight')
+  }
+  
+  function unhighlight(event) {
+    dropArea.classList.remove('highlight')
+  }
+  
+  dropArea.addEventListener('drop', handleDrop, false)
+  
+  function handleDrop(event) {
+    const dt = event.dataTransfer
+    const files = dt.files
+    handleFiles(files)
+    formUploadText.innerHTML = [...files][0].name
+  }
+  
+  let myFiles = []
+  
+  function handleFiles(files) {
+    files = [...files]
+    files.forEach(uploadFile)
     myFiles = files
   }
-  input.click()
-}
-
-function handleSubmit(event) {
-  event.preventDefault()
-  const formData = new FormData(event.target)
-  const data = {}
-  formData.forEach((value, key) => {
-    if(key === 'file') {
-      data[key] = myFiles[0]
-    } else {
-      data[key] = value
-    }
+  
+  
+  function uploadFile(file) {
+    const formData = new FormData()
+  
+    formData.append('file', file)
+    
+    return file
+  }
+  
+  
+  const uploadZoneButton = document.querySelector('.upload-zone-click')
+  
+  uploadZoneButton.addEventListener('click', () => {
+    importData()
   })
-  console.log(data)
+  
+  function importData () {
+    let input = document.createElement('input')
+    input.type = 'file'
+    input.onchange = _ => {
+      let files = Array.from(input.files)
+      formUploadText.innerHTML = files[0].name
+      myFiles = files
+    }
+    input.click()
+  }
+  
+  function handleSubmit(event) {
+    event.preventDefault()
+    const formData = new FormData(event.target)
+    const data = {}
+    formData.forEach((value, key) => {
+      if(key === 'file') {
+        data[key] = myFiles[0]
+      } else {
+        data[key] = value
+      }
+    })
+    console.log(data)
+  }
+  
+  const form = document.querySelector('.form')
+  form.addEventListener('submit', handleSubmit)
+  
+  
+  if(myFiles.length > 0) {
+    formUploadText.innerHTML = `${myFiles[0].name}`
+  }
 }
 
-const form = document.querySelector('.form')
-form.addEventListener('submit', handleSubmit)
-
-
-if(myFiles.length > 0) {
-  formUploadText.innerHTML = `${myFiles[0].name}`
+if (window.location.pathname === "/") {
+  homeScript()
+} else {
+  factoringScript()
 }
+
 
 
 
