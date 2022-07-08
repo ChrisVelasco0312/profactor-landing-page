@@ -24,7 +24,6 @@ module.exports = {
     'partner-14.png',
     'partner-15.png',
     'partner-16.png'
-
   ],
 
 }

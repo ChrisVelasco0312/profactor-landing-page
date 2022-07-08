@@ -1,0 +1,56 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<!-- DOWNLOAD SECTION -->
+<section class="download-section">
+  <div class="download-container">
+    <div class="download-content">
+      <h1 class="download-title">
+        Descarga tú formato de
+        vinculación aquí
+      </h1>
+      <a class="download-button" href="#">
+        DESCARGAR FORMATO
+      </a>
+    </div>
+  </div>
+</section>
+
+<!--FORMAT FORM SECTION-->
+<section class="format-section dark-section">
+  <div class="format-container">
+    <div class="format-content">
+      <h1 class="format-title">
+        Sube tu formato aquí
+      </h1>
+      <div class="format-form">
+        <form class="form" enctype="multipart/form-data">
+          <div class="form-group">
+            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nombre">
+            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Correo Electrónico">
+
+            <div class="form-upload-zone">
+              <div class="form-upload-zone--wrapper">
+                <img class="form-upload-zone--icon" src="/img/file-icon.svg" alt="upload file">
+                <p class="form-upload-text">
+                  <strong>Arrastra tu formato aquí</strong>
+                  <br>
+                  <br>
+                  O <a class="upload-zone-click" href="#">búscalo</a> en tus archivos
+                </p>
+                <input onchange="handleFiles(this.files)" type="file" class="form-control upload-control" id="file"
+                  name="file">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="submit-button">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <hr class="endline">
+
+  {% endblock content%}
