@@ -1,6 +1,8 @@
 
 const homeScript = () => {
-  const returnAppear = (trigger, duration, direction) => {
+  
+  const animationsScript = () => {
+   const returnAppear = (trigger, duration, direction) => {
   
     const properties = (x, y) => [
       {
@@ -129,7 +131,11 @@ const homeScript = () => {
       console.log("triggered")
     });
   })
-  //  slider properties using the splide library
+  }
+
+  // animationsScript()
+
+    //  slider properties using the splide library
   
   const splide2 = new Splide('.splide', {
     perPage: 3,

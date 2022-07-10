@@ -1,0 +1,42 @@
+
+{%- from "components/TitleGroup/macro.njk" import TitleGroup -%}
+
+<div class="graph-container dark-section"> 
+  <section class="graph-section">
+    {{
+      TitleGroup({
+        subtitle: 'DIAGRAMAS',
+        title: 'Diagrama de Flujo Proceso de Factoring',
+        titlesGap: '0.8rem',
+        subtitleColor: 'var(--accent)',
+        textAlign: 'center',
+        titleColor: 'white'
+      })
+    }}
+
+    <!-- <div class="graph-wrapper"> -->
+    <!--   <div class="graph-card"> -->
+    <!--     <h3>Recepción de documentación</h3> -->
+    <!--     <ul> -->
+    <!--       <li>Factura original endosada.</li> -->
+    <!--       <li>Documentos para la inscripción  -->
+    <!--           del cliente y estudio de asignación de cupo. -->
+    <!--       </li> -->
+    <!--     </ul>  -->
+    <!--   </div> -->
+    <!--   <div class="graph-card"> -->
+    <!--     <p>  -->
+    <!--       Verificar que la factura cumpla  -->
+    <!--       los requisitos de título valor y todos  -->
+    <!--       los parámetro de la ley 1231.  -->
+    <!--     </p> -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+    <div class="graph-wrapper">
+      <img  src="/img/flow-chart.svg" alt="">
+    </div>
+
+  </section>
+</div>
+
