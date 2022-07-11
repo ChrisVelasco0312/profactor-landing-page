@@ -154,7 +154,22 @@ const homeScript = () => {
       clickable: true,
     }
   }).mount()
+
+
+  
+
 }
+
+const closeButtton = document.querySelector('.navbar-mobile-close')
+const navbarMovileMenuButton = document.querySelector('.navbar-mobile-menu')
+
+closeButtton.addEventListener('click', () => {
+  document.querySelector('.navbar-mobile-actions').style.display = 'none'
+})
+
+navbarMovileMenuButton.addEventListener('click', () => {
+  document.querySelector('.navbar-mobile-actions').style.display = 'grid'
+})
 
 
 const factoringScript = () => {

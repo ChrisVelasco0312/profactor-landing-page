@@ -44,12 +44,14 @@
       --size-md: 300px;
       --size-lg: 430px;
       /* Responsive functions*/
+      --responsive-text: clamp(0.875rem, 2vw + 0rem, 1.25rem);
       --responsive-title: clamp(2rem, 1.2500rem + 3.3333vw, 3rem);
       --responsive-columns: repeat(auto-fit, minmax(min(100%, var(--size-md)), 1fr));
     }
   </style>
 
   <div class="root">
+    {% include "partials/fullscreen-menu.html" %}
     <header class="header dark-section">{% include "partials/header.html" %}</header>
     <div class="main-content reveal">
       {% block content %}
