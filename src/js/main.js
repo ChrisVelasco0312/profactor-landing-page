@@ -152,24 +152,55 @@ const homeScript = () => {
     pagination: {
       type: 'bullets',
       clickable: true,
-    }
+    },
+    breakpoints: {
+      // Mobile portrait.
+      320: {
+        perPage: 1,
+        height: '220px',
+        gap: '0.5rem',
+      },
+      // Mobile landscape.
+      480: {
+        perPage: 1,
+        height: '280px',
+        gap: '0.5rem',
+      },
+    },
   }).mount()
-
-
-  
-
 }
 
 const closeButtton = document.querySelector('.navbar-mobile-close')
-const navbarMovileMenuButton = document.querySelector('.navbar-mobile-menu')
+const navbarMobileMenu = document.querySelector('.navbar-mobile-actions')
+const navbarMobileMenuButton = document.querySelector('.navbar-mobile-menu')
+const navbar = document.querySelector('.navbar')
 
 closeButtton.addEventListener('click', () => {
-  document.querySelector('.navbar-mobile-actions').style.display = 'none'
+  navbarMobileMenu.style.display = 'none'
 })
 
-navbarMovileMenuButton.addEventListener('click', () => {
-  document.querySelector('.navbar-mobile-actions').style.display = 'grid'
+navbarMobileMenuButton.addEventListener('click', () => {
+  navbarMobileMenu.style.display = 'grid'
 })
+
+navbarMobileMenu.addEventListener('click', (event) => {
+  if(event.target.parentElement.classList.contains('navbar-actions-link')) {
+    navbarMobileMenu.style.display = 'none'
+  }
+})
+
+var lastScrollTop = 0;
+
+window.addEventListener("scroll", () =>{ 
+   let st = window.pageYOffset || document.documentElement.scrollTop; 
+   if (st > lastScrollTop){
+      navbar.classList.remove('navbar-fixed')
+    } else {
+      navbar.classList.add('navbar-fixed')
+   }
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);
+
 
 
 const factoringScript = () => {

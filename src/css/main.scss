@@ -20,7 +20,6 @@ html {
   all: unset;
   width: 100vw;
   overflow-x: hidden;
-  height: -webkit-fill-available;
 }
 
 * {
@@ -34,7 +33,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  height: inherit;
   font-family: var(--font-family);
   overflow-x: hidden;
   /* color: var(--color-primary); */
@@ -97,6 +95,13 @@ a {
   }
 }
 
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  background-color: var(--primary);
+  z-index: 4;
+}
 
 // navbar
 header {
