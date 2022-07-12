@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
   <link href="/css/main.css" rel="stylesheet">
 
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
@@ -52,7 +53,7 @@
 
   <div class="root">
     {% include "partials/fullscreen-menu.html" %}
-    <header class="header dark-section">{% include "partials/header.html" %}</header>
+    <header id="header" class="header dark-section">{% include "partials/header.html" %}</header>
     <div class="main-content reveal">
       {% block content %}
       {% endblock content %}

@@ -174,6 +174,7 @@ const closeButtton = document.querySelector('.navbar-mobile-close')
 const navbarMobileMenu = document.querySelector('.navbar-mobile-actions')
 const navbarMobileMenuButton = document.querySelector('.navbar-mobile-menu')
 const navbar = document.querySelector('.navbar')
+const navbarMobile = document.querySelector('.navbar-mobile')
 
 closeButtton.addEventListener('click', () => {
   navbarMobileMenu.style.display = 'none'
@@ -191,17 +192,17 @@ navbarMobileMenu.addEventListener('click', (event) => {
 
 var lastScrollTop = 0;
 
-window.addEventListener("scroll", () =>{ 
-   let st = window.pageYOffset || document.documentElement.scrollTop; 
-   if (st > lastScrollTop){
-      navbar.classList.remove('navbar-fixed')
-    } else {
-      navbar.classList.add('navbar-fixed')
-   }
-   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false);
-
-
+// window.addEventListener("scroll", () => { 
+//    let st = window.pageYOffset || document.documentElement.scrollTop; 
+//    if (st > lastScrollTop){
+//       navbar.classList.remove('navbar-fixed')
+//       navbarMobile.classList.remove('navbar-fixed')
+//     } else {
+//       navbar.classList.add('navbar-fixed')
+//       navbarMobile.classList.add('navbar-fixed')
+//    }
+//    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+// }, false);
 
 const factoringScript = () => {
 
