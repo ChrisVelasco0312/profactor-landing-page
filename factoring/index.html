@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+  <link href="/css/main.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" defer></script>
+
+  <script src="/profactor-landing-page/js/main.js" defer></script>
+  <title>
+    
+    Profactor
+    
+  </title>
+</head>
+
+<body>
+  <style>
+    :root {
+      /*colors*/
+      --primary: #02092A;
+      --secondary: #709CFF;
+      --accent: #6091FF;
+      /* fonts */
+      --font-family: 'Poppins', sans-serif;
+      --main-size: 1368px;
+      /* sizes */
+      --navbar-size: 130px;
+      --footer-sice: 230px;
+      --size-sm: 150px;
+      --size-md: 300px;
+      --size-lg: 430px;
+      /* Responsive functions*/
+      --responsive-text: clamp(0.875rem, 2vw + 0rem, 1.25rem);
+      --responsive-title: clamp(2rem, 1.2500rem + 3.3333vw, 3rem);
+      --responsive-columns: repeat(auto-fit, minmax(min(100%, var(--size-md)), 1fr));
+    }
+  </style>
+
+  <div class="root">
+    <div class="navbar-mobile-actions">
+  <div class="navbar-mobile-close">
+    <img src="/profactor-landing-page/img/close-icon.svg" alt="">
+  </div>
+  <div class="navbar-mobile-brand">
+    <a href="/profactor-landing-page/">
+      <img src="/profactor-landing-page/img/profactor-logo.svg" alt="">
+    </a>
+  </div>
+  <span class="navbar-actions">
+    
+    <a class="navbar-actions-link" href="/#start">
+      <li>INICIO</li>
+    </a>
+    
+    <a class="navbar-actions-link" href="/#about">
+      <li>¿QUIÉNES SOMOS?</li>
+    </a>
+    
+    <a class="navbar-actions-link" href="/#products">
+      <li>PRODUCTOS</li>
+    </a>
+    
+  </span>
+  <a href="/profactor-landing-page/factoring" class="navbar-actions-link outline-button">
+    <li>HAZ FACTORING CON NOSOTROS</li>
+  </a>
+</div>
+    <header id="header" class="header dark-section"><nav class="navbar">
+  <span class="navbar__brand">
+    <a href="/profactor-landing-page/" class="navbar__link">
+      <img src="/profactor-landing-page/img/profactor-logo.svg" alt="logo">
+    </a>
+    <div class="navbar___brand-titles">
+      <h1 class="navbar__brand-title"></h1>
+    </div>
+  </span>
+  <span class="navbar__actions">
+    
+    <a class="navbar__actions-link" href="/#start">
+      <li>INICIO</li>
+    </a>
+    
+    <a class="navbar__actions-link" href="/#about">
+      <li>¿QUIÉNES SOMOS?</li>
+    </a>
+    
+    <a class="navbar__actions-link" href="/#products">
+      <li>PRODUCTOS</li>
+    </a>
+    
+    <a href="/profactor-landing-page/factoring" class="navbar__actions-link outline-button">
+      <li>HAZ FACTORING CON NOSOTROS</li>
+    </a>
+  </span>
+</nav>
+
+
+<nav class="navbar-mobile">
+  <div class="navbar-mobile-menu">
+    <img src="/profactor-landing-page/img/icon-menu.svg" alt="menu">
+  </div>
+  <span class="navbar-brand">
+    <a href="/profactor-landing-page/" class="navbar-link">
+      <img src="/profactor-landing-page/img/profactor-logo.svg" alt="logo">
+    </a>
+  </span>
+</nav></header>
+    <div class="main-content reveal">
+      
+
+<!-- DOWNLOAD SECTION -->
+<section class="download-section">
+  <div class="download-container">
+    <div class="download-content">
+      <h1 class="download-title">
+        Descarga tú formato de
+        vinculación aquí
+      </h1>
+      <a class="download-button" href="#">
+        DESCARGAR FORMATO
+      </a>
+    </div>
+  </div>
+</section>
+
+<!--FORMAT FORM SECTION-->
+<section class="format-section dark-section">
+  <div class="format-container">
+    <div class="format-content">
+      <h1 class="format-title">
+        Sube tu formato aquí
+      </h1>
+      <div class="format-form">
+        <form class="form" enctype="multipart/form-data">
+          <div class="form-group">
+            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nombre">
+            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Correo Electrónico">
+
+            <div class="form-upload-zone">
+              <div class="form-upload-zone--wrapper">
+                <img class="form-upload-zone--icon" src="/img/file-icon.svg" alt="upload file">
+                <p class="form-upload-text">
+                  <strong>Arrastra tu formato aquí</strong>
+                  <br>
+                  <br>
+                  O <a class="upload-zone-click" href="#">búscalo</a> en tus archivos
+                </p>
+                <input onchange="handleFiles(this.files)" type="file" class="form-control upload-control" id="file"
+                  name="file">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="submit-button">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="#header" class="go-up-button">
+  <!--up arrow character svg-->
+  <svg width="40px" class="go-up-button__icon" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+  </svg>
+</a>
+
+<div class="graph-container dark-section">
+  <section class="graph-section">
+    
+  <div class="titles" style="display: grid; gap:0.8rem; justify-self:;">
+  <h3 style="color: var(--accent); font-weight: bold; text-align:center;" class="subtitle">DIAGRAMAS</h3>
+  <h1 style="color: white; font-weight: bold;" class="title">Diagrama de Flujo Proceso de Factoring</h1>
+</div>
+
+
+
+    <div class="graph-wrapper">
+      <img src="/profactor-landing-page/img/flow-chart.svg" alt="">
+    </div>
+
+  </section>
+</div>
+
+<hr class="endline">
+
+
+    </div>
+    <footer class="footer dark-section">
+      <div class="footer-container">
+  <div class="footer-content-left">
+    <ul class="footer-info">
+      <li>
+        <img src="/profactor-landing-page/img/email-icon.svg" alt="email">
+        contacto@profactor.com
+      </li>
+      <li>
+        <img src="/profactor-landing-page/img/phone-icon.svg" alt="phone">
+        +57 322 678 6790
+      </li>
+      <li>
+        <img src="/profactor-landing-page/img/address-icon.svg" alt="location">
+        Calle 12
+      </li>
+  </div>
+  <div class="footer-content-right">
+    <a href="/profactor-landing-page/factoring" class="outline-button">
+      HAZ FACTORING CON NOSOTROS
+    </a>
+  </div>
+</div>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>
