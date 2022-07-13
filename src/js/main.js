@@ -182,6 +182,7 @@ closeButtton.addEventListener('click', () => {
 
 navbarMobileMenuButton.addEventListener('click', () => {
   navbarMobileMenu.style.display = 'grid'
+  document.querySelector('root').style.overflow = 'hidden'
 })
 
 navbarMobileMenu.addEventListener('click', (event) => {

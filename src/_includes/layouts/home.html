@@ -107,7 +107,7 @@ title: "Profactor"
         titleColor: 'black' })
     }}
 
-    <div class="our-projects__card" style="background-image: url({{'/img/projects-factoring.png' |  url}});">
+    <div class="our-projects__card" style="background-image: url('{{'/img/projects-factoring.png' |  url}}');">
 
       <!-- <div class="our-projects__card--image"> -->
       <!--   <img src="/img/projects-factoring.png"> -->
@@ -131,7 +131,7 @@ title: "Profactor"
       </div>
     </div>
 
-    <div class="our-projects__card" style="background-image: url({{ '/img/projects-banca.png' | url }});">
+    <div class="our-projects__card" style="background-image: url('{{ '/img/projects-banca.png' | url }}');">
       <div class="our-projects__card-content">
         <div class="our-projects__card-content--titles">
           <h2>02</h2>
@@ -268,7 +268,7 @@ title: "Profactor"
 
             {% for image in site.partners %}
             <li class="splide__slide">
-              <img class="splide__slide-image" src="{{ '/img/partners/'~image | url }}" />
+              <img class="splide__slide-image" src="'/profactor-landing-page/img/partners/{{image}}" />
             </li>
             {% endfor %}
         </div>
