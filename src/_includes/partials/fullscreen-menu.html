@@ -9,7 +9,7 @@
   </div>
   <span class="navbar-actions">
     {% for item in site.navbarLinks %}
-    <a class="navbar-actions-link" href="{{ '/'~item.link | url }}">
+    <a class="navbar-actions-link" href="/profactor-landing-page/{{item.link}}">
       <li>{{ item.name }}</li>
     </a>
     {% endfor %}
