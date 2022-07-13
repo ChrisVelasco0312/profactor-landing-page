@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "eleventy --serve --input=src --output=dist --pathprefix=/",
-    "build": "eleventy --input=src --output=dist --pathprefix=/profactor-page"
+    "build": "eleventy --input=src --output=dist --pathprefix=/profactor-landing-page"
   },
   "keywords": [],
   "author": "",
