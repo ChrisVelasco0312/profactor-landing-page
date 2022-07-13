@@ -1,7 +1,7 @@
 <nav class="navbar">
   <span class="navbar__brand">
-    <a href="/" class="navbar__link">
-      <img src="/img/profactor-logo.svg" alt="logo">
+    <a href="{{ '/' | url }}" class="navbar__link">
+      <img src="{{ '/img/profactor-logo.svg' | url }}" alt="logo">
     </a>
     <div class="navbar___brand-titles">
       <h1 class="navbar__brand-title">{{site.brandName}}</h1>
@@ -9,11 +9,11 @@
   </span>
   <span class="navbar__actions">
     {% for item in site.navbarLinks %}
-    <a class="navbar__actions-link" href="/{{item.link}}">
+    <a class="navbar__actions-link" href="{{ '/'~item.link | url }}">
       <li>{{ item.name }}</li>
     </a>
     {% endfor %}
-    <a href="/factoring" class="navbar__actions-link outline-button">
+    <a href="{{ '/factoring' | url }}" class="navbar__actions-link outline-button">
       <li>HAZ FACTORING CON NOSOTROS</li>
     </a>
   </span>
@@ -22,12 +22,11 @@
 
 <nav class="navbar-mobile">
   <div class="navbar-mobile-menu">
-    <img src="/img/icon-menu.svg" alt="menu">
+    <img src="{{ '/img/icon-menu.svg' | url }}" alt="menu">
   </div>
   <span class="navbar-brand">
-    <a href="/" class="navbar-link">
-      <img src="/img/profactor-logo.svg" alt="logo">
+    <a href="{{ '/' | url }}" class="navbar-link">
+      <img src="{{ '/img/profactor-logo.svg' | url }}" alt="logo">
     </a>
   </span>
 </nav>
-

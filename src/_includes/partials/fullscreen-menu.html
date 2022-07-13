@@ -1,20 +1,20 @@
 <div class="navbar-mobile-actions">
   <div class="navbar-mobile-close">
-    <img src="/img/close-icon.svg" alt="">
+    <img src="{{ '/img/close-icon.svg' | url }}" alt="">
   </div>
   <div class="navbar-mobile-brand">
-    <a href="/">
-      <img src="/img/profactor-logo.svg" alt="">
+    <a href="{{ '/' | url }}">
+      <img src="{{ '/img/profactor-logo.svg' | url }}" alt="">
     </a>
   </div>
   <span class="navbar-actions">
     {% for item in site.navbarLinks %}
-      <a class="navbar-actions-link" href="/{{item.link}}">
-        <li>{{ item.name }}</li>
-      </a>
-    {% endfor %}  
+    <a class="navbar-actions-link" href="{{ '/'~item.link | url }}">
+      <li>{{ item.name }}</li>
+    </a>
+    {% endfor %}
   </span>
-  <a href="/factoring" class="navbar-actions-link outline-button">
-     <li>HAZ FACTORING CON NOSOTROS</li>
-   </a>
+  <a href="{{ '/factoring' | url }}" class="navbar-actions-link outline-button">
+    <li>HAZ FACTORING CON NOSOTROS</li>
+  </a>
 </div>

@@ -9,10 +9,10 @@ title: "Profactor"
 {% block content %}
 
 <!-- HERO SECTION -->
-<section class="hero" style="background-image: url('/img/hero-image.png')">
+<section class="hero" style="background-image: url({{ '/img/hero-image.png' | url }})">
   <div class="titles">
     <h1 class="title">SERVICIOS FINANCIEROS</h1>
-    <a class="hero-link outline-button" href="/factoring">HAZ FACTORING CON NOSOTROS</a>
+    <a class="hero-link outline-button" href="{{ '/factoring' | url}}">HAZ FACTORING CON NOSOTROS</a>
     <hr>
   </div>
 </section>
@@ -46,7 +46,7 @@ title: "Profactor"
       </div>
     </div>
 
-    <img class="about-who__image" src="/img/about-who.png" alt="whoweare">
+    <img class="about-who__image" src="{{ '/img/about-who.png' | url }}" alt="whoweare">
   </section>
 
   <section class="about-us">
@@ -107,7 +107,7 @@ title: "Profactor"
         titleColor: 'black' })
     }}
 
-    <div class="our-projects__card" style="background-image: url('/img/projects-factoring.png');">
+    <div class="our-projects__card" style="background-image: url({{'/img/projects-factoring.png' |  url}});">
 
       <!-- <div class="our-projects__card--image"> -->
       <!--   <img src="/img/projects-factoring.png"> -->
@@ -131,7 +131,7 @@ title: "Profactor"
       </div>
     </div>
 
-    <div class="our-projects__card" style="background-image: url('/img/projects-banca.png');">
+    <div class="our-projects__card" style="background-image: url({{ '/img/projects-banca.png' | url }});">
       <div class="our-projects__card-content">
         <div class="our-projects__card-content--titles">
           <h2>02</h2>
@@ -241,7 +241,7 @@ title: "Profactor"
         </h1>
       </div>
     </div>
-    <a href="/factoring" class="outline-button factoring-button">
+    <a href="{{ '/factoring' | url }}" class="outline-button factoring-button">
       HAZ FACTORING CON NOSOTROS
     </a>
   </section>
@@ -268,7 +268,7 @@ title: "Profactor"
 
             {% for image in site.partners %}
             <li class="splide__slide">
-              <img class="splide__slide-image" src="/img/partners/{{ image }}" />
+              <img class="splide__slide-image" src="{{ '/img/partners/'~image | url }}" />
             </li>
             {% endfor %}
         </div>
