@@ -303,7 +303,7 @@ const factoringScript = () => {
   }
 }
 
-if (window.location.pathname === "/") {
+if (window.location.pathname === "profactor-landing-page") {
   homeScript()
 } else {
   factoringScript()
