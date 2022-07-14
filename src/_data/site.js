@@ -24,4 +24,8 @@ module.exports = {
     '/img/partners/partner-15.png',
     '/img/partners/partner-16.png',
   ],
+  services : [
+    '/img/services-control-de-activos.png',
+    '/img/services-clientes-emisores.png',
+  ]
  }

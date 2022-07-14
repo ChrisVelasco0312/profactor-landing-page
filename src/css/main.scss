@@ -537,7 +537,6 @@ header {
     }
 
     &-card {
-      background-image: url('/img/services-control-de-activos.png');
       @include backgroundImageNoRepeat();
       display: grid;
       height: 751px;
@@ -578,7 +577,6 @@ header {
         width: 95%;
       }
 
-      background-image: url('/img/services-clientes-emisores.png');
       @include backgroundImageNoRepeat();
       display: grid;
       height: 751px;
