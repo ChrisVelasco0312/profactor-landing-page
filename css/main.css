@@ -479,7 +479,6 @@ header .navbar .navbar__actions .navbar__actions-link {
   height: 2px;
 }
 .services-container .services-card {
-  background-image: url("/img/services-control-de-activos.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -517,7 +516,6 @@ header .navbar .navbar__actions .navbar__actions-link {
   gap: 1rem;
 }
 .services-container .services-card--2 {
-  background-image: url("/img/services-clientes-emisores.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
