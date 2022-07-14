@@ -287,9 +287,9 @@ const factoringScript = () => {
 
 console.log("window location pathname", window.location.pathname)
 
-if (window.location.pathname === "profactor-landing-page" || window.location.pathname === "/") {
+if (window.location.pathname === "/profactor-landing-page/" || window.location.pathname === "/") {
   homeScript()
-} else {
+} else if(window.location.pathname === "/profactor-landing-page/factoring/" || window.location.pathname === "/factoring/") {
   factoringScript()
 }
 
