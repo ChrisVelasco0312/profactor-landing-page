@@ -268,7 +268,7 @@ title: "Profactor"
 
             {% for image in site.partners %}
             <li class="splide__slide">
-              <img class="splide__slide-image" src="'/profactor-landing-page/img/partners/{{image}}" />
+              <img class="splide__slide-image" src="{{ image | url }}" />
             </li>
             {% endfor %}
         </div>
