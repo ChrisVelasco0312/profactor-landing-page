@@ -120,14 +120,6 @@ const homeScript = () => {
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
-  
-      //   gsap.to(window, {
-      // 	scrollTo: {
-      // 		y: 100,
-      // 		autoKill: false
-      // 	},
-      // 	duration: 1
-      // });
       console.log("triggered")
     });
   })
@@ -178,37 +170,24 @@ const navbarMobile = document.querySelector('.navbar-mobile')
 
 closeButtton.addEventListener('click', () => {
   navbarMobileMenu.style.display = 'none'
+  document.documentElement.style.overflowY = 'auto'
 })
 
 navbarMobileMenuButton.addEventListener('click', () => {
   navbarMobileMenu.style.display = 'grid'
   
   // block scroll for html tag
-  document.body.style.overflow = 'hidden'
+  document.documentElement.style.overflowY = 'hidden'
 })
 
 navbarMobileMenu.addEventListener('click', (event) => {
   if(event.target.parentElement.classList.contains('navbar-actions-link')) {
     navbarMobileMenu.style.display = 'none'
+    document.documentElement.style.overflowY = 'auto'
   }
 })
 
-var lastScrollTop = 0;
-
-// window.addEventListener("scroll", () => { 
-//    let st = window.pageYOffset || document.documentElement.scrollTop; 
-//    if (st > lastScrollTop){
-//       navbar.classList.remove('navbar-fixed')
-//       navbarMobile.classList.remove('navbar-fixed')
-//     } else {
-//       navbar.classList.add('navbar-fixed')
-//       navbarMobile.classList.add('navbar-fixed')
-//    }
-//    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-// }, false);
-
 const factoringScript = () => {
-
   //DROPAREA LOGIC
   const dropArea = document.querySelector('.form-upload-zone')
   const formUploadText = document.querySelector('.form-upload-text')
@@ -306,7 +285,9 @@ const factoringScript = () => {
   }
 }
 
-if (window.location.pathname === "profactor-landing-page") {
+console.log("window location pathname", window.location.pathname)
+
+if (window.location.pathname === "profactor-landing-page" || window.location.pathname === "/") {
   homeScript()
 } else {
   factoringScript()
